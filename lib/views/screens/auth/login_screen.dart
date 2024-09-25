@@ -16,4 +16,18 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
+
+  Widget _buildUI() {
+    return const SafeArea(
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: 15.0,
+          vertical: 20.0
+        ),
+        child: Column(
+          children: [],
+        ),
+      ),
+    );
+  }
 }
