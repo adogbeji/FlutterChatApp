@@ -12,7 +12,15 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Login Screen'),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text('Hi, Welcome Back!', style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),),
+          ],
+        ),
       ),
     );
   }
