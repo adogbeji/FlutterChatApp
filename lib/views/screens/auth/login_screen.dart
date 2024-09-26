@@ -19,6 +19,12 @@ class _LoginScreenState extends State<LoginScreen> {
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),),
+
+            Text('Hello again, you\'ve been missed', style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey,
+            ),),
           ],
         ),
       ),
