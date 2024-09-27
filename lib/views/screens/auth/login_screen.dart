@@ -1,3 +1,4 @@
+import 'package:chat_app/views/widgets/custom_form_field.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -11,21 +12,28 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text('Hi, Welcome Back!', style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),),
-
-            Text('Hello again, you\'ve been missed', style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w500,
-              color: Colors.grey,
-            ),),
-          ],
+      body: Padding(
+        padding: EdgeInsets.all(14.0),
+        child: Center(
+          child: Form(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text('Hi, Welcome Back!', style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),),
+            
+                Text('Hello again, you\'ve been missed', style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey,
+                ),),
+        
+                CustomFormField(),
+              ],
+            ),
+          ),
         ),
       ),
     );
