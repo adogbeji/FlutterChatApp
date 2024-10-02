@@ -29,8 +29,20 @@ class _LoginScreenState extends State<LoginScreen> {
                   fontWeight: FontWeight.w500,
                   color: Colors.grey,
                 ),),
-        
-                CustomFormField(),
+
+                // EMAIL INPUT FIELD
+                CustomFormField(
+                  labelText: 'Email', 
+                  hintText: 'Enter Email...',
+                ),
+
+                SizedBox(height: 8,),
+
+                // PASSWORD INPUT FIELD
+                CustomFormField(
+                  labelText: 'Password', 
+                  hintText: 'Enter Password...',
+                ),
               ],
             ),
           ),
