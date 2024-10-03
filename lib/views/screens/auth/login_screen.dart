@@ -11,37 +11,58 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(14.0),
+        padding: const EdgeInsets.all(14.0),
         child: Center(
           child: Form(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('Hi, Welcome Back!', style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),),
-            
-                Text('Hello again, you\'ve been missed', style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.grey,
-                ),),
+                const Text(
+                  'Hi, Welcome Back!',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+
+                const Text(
+                  'Hello again, you\'ve been missed',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.grey,
+                  ),
+                ),
 
                 // EMAIL INPUT FIELD
-                CustomFormField(
-                  labelText: 'Email', 
+                const CustomFormField(
+                  labelText: 'Email',
                   hintText: 'Enter Email...',
                 ),
 
-                SizedBox(height: 8,),
+                const SizedBox(height: 8,),
 
                 // PASSWORD INPUT FIELD
-                CustomFormField(
-                  labelText: 'Password', 
+                const CustomFormField(
+                  labelText: 'Password',
                   hintText: 'Enter Password...',
+                ),
+
+                const SizedBox(height: 8,),
+
+                // LOGIN BUTTON
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 52,
+                  decoration: const BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(6),),
+                  ),
+                  child: const Center(
+                    child: Text('Log In'),
+                  ),
                 ),
               ],
             ),
@@ -54,10 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget _buildUI() {
     return const SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 15.0,
-          vertical: 20.0
-        ),
+        padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
         child: Column(
           children: [],
         ),

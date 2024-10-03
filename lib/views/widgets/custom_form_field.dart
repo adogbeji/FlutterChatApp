@@ -11,7 +11,7 @@ class CustomFormField extends StatelessWidget {
     return TextFormField(
       decoration: InputDecoration(
         labelText: labelText,
-        border: OutlineInputBorder(),
+        border: const OutlineInputBorder(),
       ),
     );
   }
