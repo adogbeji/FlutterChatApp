@@ -36,6 +36,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
 
+                const SizedBox(height: 22,),
+
                 // EMAIL INPUT FIELD
                 const CustomFormField(
                   labelText: 'Email',
@@ -63,6 +65,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: const Center(
                     child: Text('Log In'),
                   ),
+                ),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text('Don\'t have an account?'),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text('Sign Up'),
+                    ),
+                  ],
                 ),
               ],
             ),
