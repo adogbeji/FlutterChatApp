@@ -9,6 +9,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final GlobalKey<FormState> _loginFormKey = GlobalKey<FormState>();  // Form Key
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,6 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: const EdgeInsets.all(14.0),
         child: Center(
           child: Form(
+            key: _loginFormKey,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
