@@ -9,6 +9,7 @@ class CustomFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      validator: (value) {},
       decoration: InputDecoration(
         labelText: labelText,
         border: const OutlineInputBorder(),

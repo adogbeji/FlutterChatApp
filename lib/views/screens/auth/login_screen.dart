@@ -58,15 +58,20 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 8,),
 
                 // LOGIN BUTTON
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 52,
-                  decoration: const BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.all(Radius.circular(6),),
-                  ),
-                  child: const Center(
-                    child: Text('Log In'),
+                InkWell(
+                  onTap: () {
+                    if (_loginFormKey.currentState!.validate()) {}
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 52,
+                    decoration: const BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.all(Radius.circular(6),),
+                    ),
+                    child: const Center(
+                      child: Text('Log In'),
+                    ),
                   ),
                 ),
 
