@@ -1,5 +1,7 @@
-import 'package:chat_app/views/widgets/custom_form_field.dart';
 import 'package:flutter/material.dart';
+
+import 'package:chat_app/consts.dart';
+import 'package:chat_app/views/widgets/custom_form_field.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -42,17 +44,19 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 22,),
 
                 // EMAIL INPUT FIELD
-                const CustomFormField(
+                CustomFormField(
                   labelText: 'Email',
                   hintText: 'Enter Email...',
+                  validationRegEx: EMAIL_VALIDATION_REGEX,
                 ),
 
                 const SizedBox(height: 8,),
 
                 // PASSWORD INPUT FIELD
-                const CustomFormField(
+                CustomFormField(
                   labelText: 'Password',
                   hintText: 'Enter Password...',
+                  validationRegEx: PASSWORD_VALIDATION_REGEX,
                 ),
 
                 const SizedBox(height: 8,),
@@ -93,14 +97,14 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildUI() {
-    return const SafeArea(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
-        child: Column(
-          children: [],
-        ),
-      ),
-    );
-  }
+  // Widget _buildUI() {
+  //   return const SafeArea(
+  //     child: Padding(
+  //       padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
+  //       child: Column(
+  //         children: [],
+  //       ),
+  //     ),
+  //   );
+  // }
 }
