@@ -57,6 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   labelText: 'Password',
                   hintText: 'Enter Password...',
                   validationRegEx: PASSWORD_VALIDATION_REGEX,
+                  obscureText: true,
                 ),
 
                 const SizedBox(height: 8,),

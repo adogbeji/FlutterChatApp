@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CustomFormField extends StatelessWidget {
-  const CustomFormField({super.key, required this.labelText, required this.hintText, required this.validationRegEx});
+  const CustomFormField({
+    super.key, 
+    required this.labelText, 
+    required this.hintText, 
+    required this.validationRegEx, 
+    this.obscureText = false
+  });
 
   final String labelText;
   final String hintText;
   final RegExp validationRegEx;
+  final bool obscureText;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +27,7 @@ class CustomFormField extends StatelessWidget {
         labelText: labelText,
         border: const OutlineInputBorder(),
       ),
+      obscureText: obscureText,
     );
   }
 }
