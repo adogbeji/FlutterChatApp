@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:chat_app/consts.dart';
 import 'package:chat_app/views/widgets/custom_form_field.dart';
+import 'package:get_it/get_it.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -12,6 +13,9 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final GlobalKey<FormState> _loginFormKey = GlobalKey<FormState>();  // Form Key
+  final GetIt _getIt = GetIt.instance;  // Stores get_it package
+
+  String? email, password;
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +52,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   labelText: 'Email',
                   hintText: 'Enter Email...',
                   validationRegEx: EMAIL_VALIDATION_REGEX,
+                  onSaved: (value) {
+                    setState(() {
+                      email = value;
+                    });
+                  },
                 ),
 
                 const SizedBox(height: 8,),
@@ -58,6 +67,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   hintText: 'Enter Password...',
                   validationRegEx: PASSWORD_VALIDATION_REGEX,
                   obscureText: true,
+                  onSaved: (value) {
+                    setState(() {
+                      password = value;
+                    });
+                  },
                 ),
 
                 const SizedBox(height: 8,),
@@ -65,7 +79,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 // LOGIN BUTTON
                 InkWell(
                   onTap: () {
-                    if (_loginFormKey.currentState!.validate()) {}
+                    if (_loginFormKey.currentState!.validate()) {
+                      _loginFormKey.currentState!.save();
+                      print(email);
+                      print(password);
+                    }
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width,
