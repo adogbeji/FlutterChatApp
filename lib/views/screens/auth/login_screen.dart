@@ -1,3 +1,4 @@
+import 'package:chat_app/controllers/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
 import 'package:chat_app/consts.dart';
@@ -14,8 +15,16 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final GlobalKey<FormState> _loginFormKey = GlobalKey<FormState>();  // Form Key
   final GetIt _getIt = GetIt.instance;  // Stores get_it package
+  late AuthService _authService; 
 
   String? email, password;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _authService = _getIt.get<AuthService>();  // Gets access to AuthService class
+  }
 
   @override
   Widget build(BuildContext context) {
