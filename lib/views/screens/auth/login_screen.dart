@@ -87,11 +87,16 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 // LOGIN BUTTON
                 InkWell(
-                  onTap: () {
+                  onTap: () async {
                     if (_loginFormKey.currentState!.validate()) {
                       _loginFormKey.currentState!.save();
-                      print(email);
-                      print(password);
+                      // print(email);
+                      // print(password);
+
+                      bool result = await _authService.login(email!, password!);
+                      print(result);
+                      if (result) {
+                      } else {}
                     }
                   },
                   child: Container(
