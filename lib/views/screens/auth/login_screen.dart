@@ -88,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 // LOGIN BUTTON
                 InkWell(
                   onTap: () async {
-                    if (_loginFormKey.currentState!.validate()) {
+                    if (_loginFormKey.currentState?.validate() ?? false) {
                       _loginFormKey.currentState!.save();
                       // print(email);
                       // print(password);
