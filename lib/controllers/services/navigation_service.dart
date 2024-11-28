@@ -11,4 +11,12 @@ class NavigationService {
   final Map<String, Widget Function(BuildContext)> _routes = {
     '/login': (context) => const LoginScreen(),
   };
+
+  GlobalKey<NavigatorState>? get navigatorKey {
+    return _navigatorKey;
+  }
+
+  Map<String, Widget Function(BuildContext)> get routes {
+    return _routes;
+  }
 }
