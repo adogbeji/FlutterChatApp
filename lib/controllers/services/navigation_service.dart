@@ -19,4 +19,8 @@ class NavigationService {
   Map<String, Widget Function(BuildContext)> get routes {
     return _routes;
   }
+
+  void _pushedName(String routeName) {
+    _navigatorKey.currentState?.pushNamed(routeName);
+  }
 }
