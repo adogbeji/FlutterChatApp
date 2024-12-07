@@ -20,7 +20,15 @@ class NavigationService {
     return _routes;
   }
 
-  void _pushedName(String routeName) {
+  void _pushName(String routeName) {
     _navigatorKey.currentState?.pushNamed(routeName);
+  }
+
+  void _pushReplacementName(String routeName) {
+    _navigatorKey.currentState?.pushReplacementNamed(routeName);
+  }
+
+  void goBack() {
+    _navigatorKey.currentState?.pop();
   }
 }
